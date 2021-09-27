@@ -1,0 +1,105 @@
+{
+	id: "2A9E0DFD026D3C82"
+	group: ""
+	order_index: 1
+	filename: "the_deeper_dark"
+	title: "The Deeper Dark"
+	icon: "cavesandcliffs:deepslate"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: 0.5d
+			id: "72BBFFB91923028C"
+			tasks: [{
+				id: "5D1C751A4CE9B699"
+				type: "dimension"
+				title: "Enter the Deeper Dark Dimension"
+				icon: "stacked_dimensions_warden:deeper_layer_1_portal"
+				dimension: "stacked_dimensions_warden:deeper_dark"
+			}]
+			rewards: [{
+				id: "0A5A61E7D94BE4D6"
+				type: "item"
+				item: {
+					id: "minecraft:written_book"
+					Count: 1b
+					tag: {
+						pages: ["{\"text\":\"Wha... What is this place? Where am I?\\nIts cold... I dont like this. Lets mine down until we can find a cave.\"}"]
+						RepairCost: 0
+						author: "SharkieWasBanned"
+						display: {
+							Name: "{\"text\":\"The Deeper I Go The Colder It Gets!\"}"
+						}
+						title: "The Deeper Dark"
+						resolved: 1b
+					}
+				}
+			}]
+		}
+		{
+			x: 3.0d
+			y: 0.5d
+			dependencies: ["0A6428BCA505B3E2"]
+			id: "4E5C8BD7E4079935"
+			tasks: [{
+				id: "47E3AEDA71558E27"
+				type: "kill"
+				title: "Kill The Warden"
+				icon: "stacked_dimensions_warden:warden_heart"
+				entity: "stacked_dimensions_warden:warden"
+				value: 1L
+			}]
+			rewards: [
+				{
+					id: "221B55E579718CF7"
+					type: "item"
+					item: "minecraft:nether_star"
+				}
+				{
+					id: "7FAD45071B22E9D5"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			x: 1.5d
+			y: 0.5d
+			dependencies: ["72BBFFB91923028C"]
+			id: "0A6428BCA505B3E2"
+			tasks: [{
+				id: "1C921FE7C85A96A4"
+				type: "kill"
+				title: "Kill 3 Sculk Zombies"
+				icon: "stacked_dimensions_warden:sculk_sensor_inactive"
+				entity: "stacked_dimensions_warden:sculk_zombie"
+				value: 3L
+			}]
+			rewards: [
+				{
+					id: "478FA53D6E5BB70A"
+					type: "item"
+					item: {
+						id: "patchouli:guide_book"
+						Count: 1b
+						tag: {
+							"patchouli:book": "outvoted:book"
+						}
+					}
+				}
+				{
+					id: "6F02A0892064C98B"
+					type: "item"
+					item: "exoticbirds:bird_book"
+				}
+				{
+					id: "10A27EE7D3A4C4F4"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+	]
+}

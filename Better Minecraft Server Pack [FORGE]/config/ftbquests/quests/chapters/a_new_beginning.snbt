@@ -1,0 +1,277 @@
+{
+	id: "199DB27DAA5DBED8"
+	group: ""
+	order_index: 0
+	filename: "a_new_beginning"
+	title: "The Overworld"
+	icon: "minecraft:grass_block"
+	default_quest_shape: "square"
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "The Beginning!"
+			icon: "minecraft:grass_block"
+			x: -1.5d
+			y: 1.0d
+			id: "7AB5EA68B6C4B8C8"
+			tasks: [{
+				id: "7CD52E1D2BAF4A81"
+				type: "dimension"
+				title: "A Brand New Experience Awaits"
+				icon: "minecraft:grass_block"
+				dimension: "minecraft:overworld"
+			}]
+			rewards: [
+				{
+					id: "63183FF96AB5351E"
+					type: "item"
+					item: {
+						id: "minecraft:written_book"
+						Count: 1b
+						tag: {
+							pages: ["{\"text\":\"Welcome to your New Minecraft Adventure!\\n\\nThis Modpack expands plenty on Vanilla Concepts and brings hours of Content to enjoy!\\n\\nThe Quests are there to help with the different chapters.\\n\\nGo Explore & Create!\"}"]
+							RepairCost: 0
+							author: "SharkieWasBanned"
+							display: {
+								Name: "{\"text\":\"Minecraft Adventure\"}"
+							}
+							title: "The Overworld"
+							resolved: 1b
+						}
+					}
+				}
+				{
+					id: "6E42C0C9FF81A2E1"
+					type: "item"
+					item: "alexsmobs:animal_dictionary"
+				}
+			]
+		}
+		{
+			title: "Break the Stacked Dimension Block at Bedrock Level"
+			x: 0.0d
+			y: 1.0d
+			dependencies: ["7AB5EA68B6C4B8C8"]
+			dependency_requirement: "all_started"
+			id: "4F07870B573579C9"
+			tasks: [{
+				id: "7430DB995A079812"
+				type: "biome"
+				title: "Enter the Deeper Dark"
+				icon: "stacked_dimensions_warden:deeper_layer_1_portal"
+				biome: "stacked_dimensions_warden:deeper_dark"
+			}]
+			rewards: [
+				{
+					id: "1025E43BC8B8186B"
+					type: "item"
+					item: {
+						id: "minecraft:diamond_pickaxe"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "71571DE63D904EF3"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			title: "Obtain The Blue Journal From The Gatekeeper"
+			x: 7.5d
+			y: 1.0d
+			dependencies: ["4F07870B573579C9"]
+			dependency_requirement: "all_started"
+			id: "2CFFA8F63789D45C"
+			tasks: [{
+				id: "4EFF236D6574E6A0"
+				type: "item"
+				item: "blue_skies:blue_journal"
+			}]
+			rewards: [
+				{
+					id: "25E271D1692AE7C9"
+					type: "item"
+					item: "blue_skies:turquoise_stonebrick"
+					count: 12
+				}
+				{
+					id: "2BF94B0C835291A7"
+					type: "item"
+					item: "blue_skies:lunar_stonebrick"
+					count: 12
+				}
+			]
+		}
+		{
+			x: 1.5d
+			y: 1.0d
+			optional: true
+			id: "41776844B3411027"
+			tasks: [{
+				id: "4958128596797A78"
+				type: "kill"
+				title: "Kill Barako"
+				icon: "mowziesmobs:barako_mask"
+				entity: "mowziesmobs:barako"
+				value: 1L
+			}]
+			rewards: [
+				{
+					id: "1885AB968F8B4DBB"
+					type: "item"
+					item: "wandering_bag:wandering_bag_loot"
+				}
+				{
+					id: "508BC5BA0185802B"
+					type: "item"
+					item: {
+						id: "wandering_bag:wandering_bag"
+						Count: 1b
+						ForgeCaps: {
+							Parent: {
+								Size: 18
+								Items: [ ]
+							}
+						}
+					}
+				}
+				{
+					id: "21CA872064E12987"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			x: 4.5d
+			y: 1.0d
+			optional: true
+			id: "39AEB9675827F8F0"
+			tasks: [{
+				id: "4509A140F2A4633B"
+				type: "kill"
+				title: "Kill The Ferrous Wroughtnaut"
+				icon: "mowziesmobs:wrought_helmet"
+				entity: "mowziesmobs:ferrous_wroughtnaut"
+				value: 1L
+			}]
+			rewards: [
+				{
+					id: "6CAE47CF9420D755"
+					type: "item"
+					item: "minecraft:nether_star"
+				}
+				{
+					id: "7C5CB2698075F227"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			x: 6.0d
+			y: 1.0d
+			optional: true
+			id: "3CDA99C1DB4B523E"
+			tasks: [{
+				id: "6C2D4378AEC49594"
+				type: "kill"
+				title: "Kill The Frostmaw"
+				icon: {
+					id: "mowziesmobs:ice_crystal"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+				entity: "mowziesmobs:frostmaw"
+				value: 1L
+			}]
+			rewards: [
+				{
+					id: "41831B3E4D7E7EB3"
+					type: "item"
+					item: {
+						id: "wandering_bag:hammer_from_farlands"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "173A196019C5CE63"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			x: 3.0d
+			y: 1.0d
+			optional: true
+			id: "014397D89605FD2F"
+			tasks: [{
+				id: "6AB4E0F67F0B07B3"
+				type: "advancement"
+				title: "Successfully Defend a Village"
+				advancement: "minecraft:adventure/hero_of_the_village"
+				criterion: ""
+			}]
+			rewards: [
+				{
+					id: "6681C84C0B1F6A8F"
+					type: "item"
+					item: "villagertools:knowledge"
+				}
+				{
+					id: "76A702D8AE8E862B"
+					type: "item"
+					item: "villagertools:restock"
+				}
+				{
+					id: "09FC3345B5B5CC9B"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			title: "Obtain a Core Shard from killing the Wither"
+			x: 9.0d
+			y: 1.0d
+			description: ["Use the Shard to Summon the Pigmen Legion event by creating a Nether Reactor Core with the Blocks provided and a Beacon"]
+			dependencies: ["2CFFA8F63789D45C"]
+			id: "79E3C58C26783E94"
+			tasks: [{
+				id: "4156D5FCC73ECCF7"
+				type: "item"
+				item: "pyromancer:core_shard"
+			}]
+			rewards: [
+				{
+					id: "720795460A74D00D"
+					type: "item"
+					item: "minecraft:gold_block"
+					count: 4
+				}
+				{
+					id: "01477074F169D6C2"
+					type: "item"
+					item: "minecraft:cobblestone"
+					count: 17
+				}
+				{
+					id: "442DA57267464BF2"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+	]
+}

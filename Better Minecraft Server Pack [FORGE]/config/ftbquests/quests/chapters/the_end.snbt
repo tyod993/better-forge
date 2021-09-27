@@ -1,0 +1,140 @@
+{
+	id: "50EEC609E833AB5F"
+	group: ""
+	order_index: 6
+	filename: "the_end"
+	title: "The End"
+	icon: "minecraft:end_portal_frame"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: 0.0d
+			id: "4D36AAFE17F5CD9C"
+			tasks: [{
+				id: "444AC080F3243355"
+				type: "dimension"
+				title: "Enter The End Dimension"
+				icon: "minecraft:end_portal_frame"
+				dimension: "minecraft:the_end"
+			}]
+			rewards: [
+				{
+					id: "7B2239F7579DF766"
+					type: "item"
+					item: "minecraft:end_stone"
+					count: 64
+				}
+				{
+					id: "76515CA12B49A5EF"
+					type: "item"
+					item: {
+						id: "minecraft:written_book"
+						Count: 1b
+						tag: {
+							pages: ["{\"text\":\"Kill the Dragon and Summon the Void Worm to gain Knowledge of the Abyss!\"}"]
+							title: "The End?"
+							author: "SharkieWasBanned"
+						}
+					}
+				}
+			]
+		}
+		{
+			icon: "minecraft:dragon_head"
+			x: 1.5d
+			y: 0.0d
+			dependencies: ["4D36AAFE17F5CD9C"]
+			dependency_requirement: "all_started"
+			id: "2A51F2BA00FCA9DF"
+			tasks: [{
+				id: "412B85684482E982"
+				type: "kill"
+				title: "Kill The Ender Dragon"
+				icon: "minecraft:dragon_head"
+				entity: "minecraft:ender_dragon"
+				value: 1L
+			}]
+			rewards: [
+				{
+					id: "2142EE70349F1AA8"
+					type: "item"
+					item: "voidtotem:totem_of_void_undying"
+				}
+				{
+					id: "03D5DEF13126F18F"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			title: "Kill The Shelterer and Obtain a Void Crystal"
+			x: 3.0d
+			y: 0.0d
+			optional: true
+			id: "0F0E8DF4A4DDA42E"
+			tasks: [{
+				id: "17C877CFA29666FB"
+				type: "item"
+				item: "stalwart_dungeons:void_crystal"
+			}]
+			rewards: [
+				{
+					id: "4A79BED42836DCBE"
+					type: "item"
+					item: "wandering_bag:totem_from_nowhere"
+				}
+				{
+					id: "13829A460CFCF870"
+					type: "item"
+					item: "wandering_bag:homemade_totem"
+				}
+				{
+					id: "69EAA6D51C0BD74E"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			x: 4.5d
+			y: 0.0d
+			dependencies: ["2A51F2BA00FCA9DF"]
+			id: "43E0AD91C15669D8"
+			tasks: [{
+				id: "679295C74DF4AA03"
+				type: "kill"
+				title: "Summon and Kill The Void Worm"
+				icon: "alexsmobs:void_worm_eye"
+				entity: "alexsmobs:void_worm"
+				value: 1L
+			}]
+			rewards: [
+				{
+					id: "4E62B7D2E7CBB73D"
+					type: "item"
+					item: {
+						id: "patchouli:guide_book"
+						Count: 1b
+						tag: {
+							"patchouli:book": "theabyss:abyssbookitem"
+						}
+					}
+				}
+				{
+					id: "6B748A2ED5CAC2CD"
+					type: "item"
+					item: "theabyss:abyssportalstone"
+					count: 12
+				}
+				{
+					id: "15ACA78BCD75B69C"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+	]
+}

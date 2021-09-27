@@ -1,0 +1,108 @@
+{
+	id: "53FAF0A851398EA6"
+	group: ""
+	order_index: 7
+	filename: "the_last_chapter"
+	title: "The Last Chapter"
+	icon: {
+		id: "patchouli:guide_book"
+		Count: 1b
+		tag: {
+			"patchouli:book": "theabyss:abyssbookitem"
+		}
+	}
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.5d
+			y: -1.0d
+			dependencies: ["76D79CCB1F00FCEB"]
+			id: "5E0885E5F7E182A1"
+			tasks: [{
+				id: "59123AC31DB93558"
+				type: "dimension"
+				title: "Enter The Abyss"
+				icon: "theabyss:abyssportalstone"
+				dimension: "theabyss:theabyssdim"
+			}]
+			rewards: [
+				{
+					id: "5A564E61FEF3F173"
+					type: "item"
+					item: {
+						id: "minecraft:written_book"
+						Count: 1b
+						tag: {
+							pages: ["{\"text\":\"Is this The End?\\n\\nThis world has a much more powerfull presence that I have ever felt.\\n\\nWe need to find out how to stop this and defeat whoever is behind it before its too late!\"}"]
+							RepairCost: 0
+							title: "The Abyss End"
+							author: "SharkieWasBanned"
+							display: {
+								Name: "{\"text\":\"A New End\"}"
+							}
+						}
+					}
+				}
+				{
+					id: "09DE61D951C73254"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			title: "Craft The Translation Letter"
+			x: -1.0d
+			y: -1.0d
+			description: ["Defeat the Void Worm to gain access to the Abyss Dimension"]
+			id: "76D79CCB1F00FCEB"
+			tasks: [{
+				id: "180D8F5232FDA305"
+				type: "item"
+				item: "theabyss:translationletter"
+			}]
+			rewards: [
+				{
+					id: "3F4CC603366823DB"
+					type: "item"
+					item: {
+						id: "theabyss:theabyssdim"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "63C054EB66F11555"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			title: "Obtain The Abyss End"
+			x: 2.0d
+			y: -1.0d
+			dependencies: ["5E0885E5F7E182A1"]
+			id: "00731EDF3B34A1D9"
+			tasks: [{
+				id: "34A61BED11CCC03A"
+				type: "item"
+				item: {
+					id: "theabyss:end_of_time"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+			rewards: [{
+				id: "5C396BEC56C3E33C"
+				type: "xp"
+				xp: 1000
+			}]
+		}
+	]
+}
